@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    color: rgb(44, 41, 234); /* 设置页面主题字体颜色为蓝色 */
+    background-image: url('/static/images/back.jpg'); /* 替换为你的图片路径 */
+    background-size: cover; /* 使图片覆盖整个背景 */
+    background-position: center; /* 图片居中 */
+    background-repeat: no-repeat; /* 不重复 */
+    /*background: linear-gradient(to right, #ff9a9e, #fad0c4); /* 粉色渐变背景 */   
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 添加文本阴影 */
+    animation: textGlow 1s infinite alternate; /* 添加动画效果 */
+}
+
+@keyframes textGlow {
+     0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
+    }
+    50% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff;
+    }
+    100% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
+    }
+}
+
+.text-glow {
+    color: #fff;
+    animation: textGlow 2s infinite alternate;
+}
+
+input, button {
+    padding: 5px;/*增加内边距 */
+    margin: 20px;/* 增加按钮与上一个元素的间距 */
+    font-size: 1.5em; /* 增加字体大小 */
+    font-weight: bold; /* 加粗字体 */
+    background-color: rgba(241, 231, 238, 0.8); /* 添加背景颜色 */
+    border: 5px solid rgb(246, 53, 159);/* 边框 */
+}
+
+/* 提示信息的样式 */
+.quiz-output {
+    font-size: 2.5em; /* 增加字体大小 */
+    color: black; /* 设置提示信息的字体颜色为黑色 */
+}
+
+#romanticMystery {
+    background-color: rgba(188, 24, 136, 0.8); /* 添加背景颜色 */
+    padding: 15px 40px; /* 增加内边距以调大按钮 */
+    border-radius: 5px; /* 保持圆角 */
+    color: rgb(8, 6, 6); /* 文字颜色 */
+    border: 5px solid rgb(236, 214, 45);/* 边框 */
+    font-size: 16px; /* 增加字体大小 */
+    font-weight: bold; /* 加粗字体 */
+}
+
+#truthOrDare {
+    display: none; /* 初始状态为隐藏 */
+    margin-top: 50px;/* 增加按钮与上一个元素的间距 */
+    padding: 15px 40px; /* 增加内边距以调大按钮 */
+    background-color: rgba(231, 55, 99, 0.907); /* 半透明背景色 */
+    color: rgb(9, 6, 6);
+    border: 5px solid rgb(92, 45, 233);/* 边框 */
+    border-radius: 5px;/* 圆角 */
+    cursor: pointer;/* 鼠标悬停时显示指针 */
+    position: absolute; /* 改为绝对定位 */
+    left: 50%; /* 水平居中 */
+    transform: translateX(-50%); /* 使按钮居中 */
+    z-index: 10; /* 确保按钮在其他元素之上 */
+    font-size: 16px; /* 增加字体大小 */
+    font-weight: bold; /* 加粗字体 */
+}
+
+#truthOrDareOptions {
+    display: none; /* 初始状态为隐藏 */
+    margin-top: 50px;/* 增加按钮与上一个元素的间距 */
+}
+
+#truthOrDareOptions button {
+    margin-right: 13px;/* 增加按钮之间的间距 */
+    padding: 13px 25px;
+    background-color: rgba(248, 63, 97, 0.8); /* 半透明背景色 */
+    color: rgb(5, 5, 12);
+    border: 6px solid rgb(73, 48, 236);/* 边框 */
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative; /* 确保按钮在正常流中 */
+    z-index: 10; /* 确保按钮在其他元素之上 */
+    font-weight: bold; /* 加粗字体 */
+    font-size: 16px; /* 增加字体大小 */
+}
+
+#truthOrDare, #truthOrDareOptions button {
+    box-shadow: 0 4px 8px rgba(26, 134, 23, 0.2); /* 添加阴影效果 */
+}
+
+#gameContainer {
+    margin-top: 20px; /* 为游戏内容添加顶部间距 */
+    text-align: center; /* 内容居中 */
+}
+
+#questionContainer p, #mysteryQuizContainer p {
+    color: rgb(3, 1, 3); /* 设置问题文本颜色为黑色 */
+    font-size: 2em; /* 可选：调整字体大小 */
+    font-weight: bold; /* 加粗字体 */
+}
+
+#anniversaryMessage {
+    position: fixed; /* 固定在页面底部 */
+    bottom: 20px; /* 距离底部的距离 */
+    left: 50%; /* 水平居中 */
+    transform: translateX(-50%); /* 水平居中调整 */
+    text-align: center; /* 居中对齐 */
+    color: rgb(0, 0, 0); /* 字体颜色 */
+    font-size: 3em; /* 字体大小 */
+}

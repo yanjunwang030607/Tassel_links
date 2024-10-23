@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>**艺海拾贝小可爱空间**</title>
+</head>
+<body>
+    <h1>～～～欢迎来到艺海拾贝Loving Space～～～～</h1>
+    <input type="text" id="userInput" placeholder="请输入你的名字密码来确认身份">
+    <button onclick="displayText()">提交</button>
+    <p id="output" class="quiz-output"></p>
+    <div id="quiz" style="display: none;">
+        <button id="romanticMystery" onclick="startQuiz()">爱意满满Test</button>
+    </div>
+    <button id="truthOrDare" style="display:none;" onclick="showTruthOrDareOptions()">真心话大冒险</button>
+    <div id="truthOrDareOptions" style="display:none;">
+        <button onclick="chooseTruth()">真心话</button>
+        <button onclick="chooseDare()">大冒险</button>
+    </div>
+    <!-- 确保纪念日信息在按钮之后 -->
+    <p id="anniversaryMessage" style="color: rgb(0, 0, 0); font-size: 2em; margin-top: 20px;font-weight: bold;"></p>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
