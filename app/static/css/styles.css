@@ -3,13 +3,14 @@ body {
     text-align: center;
     margin-top: 50px;
     color: rgb(44, 41, 234); /* 设置页面主题字体颜色为蓝色 */
-    background-image: url('/static/images/back.jpg'); /* 替换为你的图片路径 */
+    background-image: url('/static/images/flower.jpg'); /* 替换为你的图片路径 */
     background-size: cover; /* 使图片覆盖整个背景 */
     background-position: center; /* 图片居中 */
     background-repeat: no-repeat; /* 不重复 */
     /*background: linear-gradient(to right, #ff9a9e, #fad0c4); /* 粉色渐变背景 */   
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 添加文本阴影 */
     animation: textGlow 1s infinite alternate; /* 添加动画效果 */
+    font-size: 13px; /* 基础字体大小 */
 }
 
 @keyframes textGlow {
@@ -38,10 +39,11 @@ input, button {
     border: 5px solid rgb(246, 53, 159);/* 边框 */
 }
 
-/* 提示信息的样式 */
+/* 欢迎您提示信息的样式 */
 .quiz-output {
-    font-size: 2.5em; /* 增加字体大小 */
-    color: black; /* 设置提示信息的字体颜色为黑色 */
+    font-size: 3.5em; /* 增加字体大小 */
+    color: rgb(246, 49, 49); /* 设置提示信息的字体颜色为黑色 */
+    font-weight: bold; /* 加粗字体 */
 }
 
 #romanticMystery {
@@ -112,5 +114,69 @@ input, button {
     transform: translateX(-50%); /* 水平居中调整 */
     text-align: center; /* 居中对齐 */
     color: rgb(0, 0, 0); /* 字体颜色 */
-    font-size: 3em; /* 字体大小 */
+    font-size: 1.3em; /* 字体大小 */
+}
+
+#meteorBottle {
+    display: none; /* 初始状态为隐藏 */
+    position: absolute; /* 绝对定位 */
+    top: 20px; /* 距离顶部的距离 */
+    right: 20px; /* 距离右侧的距离 */
+    padding: 10px 20px; /* 内边距 */
+    background-color: rgba(231, 55, 99, 0.9); /* 半透明背景色 */
+    color: white; /* 文字颜色 */
+    border: 2px solid rgb(92, 45, 233); /* 边框 */
+    border-radius: 5px; /* 圆角 */
+    cursor: pointer; /* 鼠标悬停时显示指针 */
+    z-index: 10; /* 确保按钮在其他元素之上 */
+    font-size: 16px; /* 字体大小 */
+    font-weight: bold; /* 加粗字体 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
+}
+
+#meteorBottleInput {
+    width: 80%;
+    height: 150px;
+    padding: 10px;
+    font-size: 1.2em;
+    border: 2px solid rgb(92, 45, 233);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    resize: none;
+}
+
+/* 媒体查询 */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* 调整字体大小 */
+    }
+
+    #meteorBottleInput {
+        width: 90%; /* 调整宽度 */
+        height: 120px; /* 调整高度 */
+    }
+
+    button {
+        font-size: 1em; /* 调整按钮字体大小 */
+        padding: 8px 16px; /* 调整按钮内边距 */
+    }
+}
+
+/* 删除按钮样式 */
+.delete-button {
+    font-size: 0.8em; /* 调整字体大小 */
+    padding: 5px 10px; /* 调整内边距 */
+    background-color: rgba(248, 63, 97, 0.8); /* 半透明背景色 */
+    color: white; /* 文字颜色 */
+    border: 2px solid rgb(73, 48, 236); /* 边框 */
+    border-radius: 5px; /* 圆角 */
+    cursor: pointer; /* 鼠标悬停时显示指针 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
+}
+
+/* 已发射流星瓶内容样式 */
+.sent-bottle-content {
+    color: black; /* 设置字体颜色为黑色 */
+    font-size: 0.9em; /* 设置字体大小 */
+    margin-bottom: 10px; /* 增加底部间距 */
 }

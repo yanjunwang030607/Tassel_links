@@ -21,6 +21,40 @@
     </div>
     <!-- 确保纪念日信息在按钮之后 -->
     <p id="anniversaryMessage" style="color: rgb(0, 0, 0); font-size: 2em; margin-top: 20px;font-weight: bold;"></p>
+    
+    <!-- 添加音频播放 -->
+    <audio id="backgroundMusic" loop>
+        <source src="{{ url_for('static', filename='audio/story.mp3') }}" type="audio/mpeg">
+        您的浏览器不支持音频播放。
+    </audio>
+
+    <!-- 在提交按钮之后添加流星瓶按钮 -->
+    <button id="meteorBottle" style="display:none;" onclick="showMeteorBottleInput()">流星瓶</button>
+
+    <!-- 流星瓶输入框和发射按钮 -->
+    <div id="meteorBottleContainer" style="display:none;">
+        <textarea id="meteorBottleInput" placeholder="请写下你想包装的流星瓶"></textarea>
+        <button onclick="sendMeteorBottle()">发射</button>
+        <p id="meteorBottleOutput" class="quiz-output"></p>
+    </div>
+
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+        let musicStarted = false;
+        const userInput = document.getElementById('userInput');
+        const backgroundMusic = document.getElementById('backgroundMusic');
+
+        function startMusic() {
+            if (!musicStarted) {
+                backgroundMusic.play();
+                musicStarted = true;
+                // 移除事件监听器以防止后续交互影响
+                userInput.removeEventListener('click', startMusic);
+            }
+        }
+
+        // 在输入框上添加点击事件监听器
+        userInput.addEventListener('click', startMusic);
+    </script>
 </body>
 </html>

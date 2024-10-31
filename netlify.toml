@@ -1,3 +1,0 @@
-[build]
-  publish = "app/static"
-  command = "echo 'No build command needed for static site'"
